@@ -16,5 +16,5 @@ https://discord.com/oauth2/authorize?client_id=1285786090069950536&permissions=8
 - `/editor_delete <user> <song_name> [part_name]` - Delete an editor from a map or part.
 - `/editor_set <user> <song_name> [part_name] [new_role] [new_display_name]` - Modify editor information.
 - `/progress <song_name> [part_name] [progress_status]` - Update progress status for a map or part.\
-- `/list` - List all registered tracks and parts.
+- `/list` - List all registered maps and parts.
 
