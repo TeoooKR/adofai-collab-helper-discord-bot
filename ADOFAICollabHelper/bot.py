@@ -13,26 +13,6 @@ class MyBot(discord.Client):
         await self.tree.sync()
 bot = MyBot()
 maps = {}
-@bot.tree.command(name="help", description="ADOFAI Collab Helper 봇의 명령어 목록을 표시합니다.")
-async def help_command(interaction: discord.Interaction):
-    help_text = """
-    ADOFAI Collab Helper 봇의 명령어 목록입니다:
-    1) /map_add (곡명)* (마감기한) - 곡 추가
-    2) /map_delete (곡명)* - 곡 삭제
-    3) /map_set (곡명)* (변경할 곡명) (변경할 마감기한) - 곡 수정
-    4) /part_add (곡명)* (파트이름) (시작길이) (끝길이) (마감기한) - 파트 추가
-    5) /part_delete (곡명)* (파트이름) - 파트 삭제
-    6) /part_set (곡명)* (파트이름) (변경할 파트이름) (변경할 시작길이) (변경할 끝길이) (변경할 마감기한)
-    7) /editor_add (사용자)* (곡명)* (파트이름) (역할) (정할이름)
-    8) /editor_delete (사용자)* (곡명)* (파트이름)
-    9) /set_editor (사용자)* (곡명)* (파트이름) (변경할 역할) (변경할 정할이름)
-    10) /progress (곡명)* (파트이름) (진행상태) - 파트 진행상황 추가/수정
-    11) /list - 등록된 곡/파트 목록 보기
-    12) /message_send (채팅채널) - 메시지 전송
-    13) /notice on/off (채팅채널) add/delete/set map/part/editor - 알림 설정
-    14) /notice_list - 알림 목록 보기
-    """
-    await interaction.response.send_message(help_text)
 @bot.tree.command(name="map_add", description="곡을 추가합니다.")
 @app_commands.describe(song_name="곡 이름", deadline="마감 기한")
 async def add_map(interaction: discord.Interaction, song_name: str, deadline: str = None):
