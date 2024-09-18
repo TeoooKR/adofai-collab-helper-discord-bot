@@ -1,6 +1,6 @@
 Not work yet.
 
-# Discord Music Management Bot
+# ADOFAI Collab Helper Discord Bot
 This is a bot that helps manage game ADOFAI collab on discord.
 
 ## Invite Bot
